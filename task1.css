@@ -1,0 +1,499 @@
+/* ================================================= */
+/* === 0. Base Styles and Resets (DARK MODE BASE) === */
+/* ================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Dark Mode Palette */
+    --primary-color: #4dd0e1;
+    --accent-color: #ff8a65;
+    --dark-color: #121212;
+    --light-color: #eeeeee;
+    --card-background: rgba(255, 255, 255, 0.08);
+    --card-border: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding-top: 5rem; /* Space for sticky header */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* ================================================= */
+/* === 1. Main Header (Sticky & Rounded) === */
+/* ================================================= */
+.main-header {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    padding: 0.75rem 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1400px;
+    z-index: 9999;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-nav a {
+    margin-left: 1.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.main-nav a[href="#home"] {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    font-weight: bold;
+}
+.main-nav a[href="#home"]:hover {
+    background-color: black;
+    color: #00bcd4;
+}
+
+.main-nav a:not([href="#home"]):hover {
+    color: var(--primary-color);
+    background-color: black;
+}
+
+.nav-button {
+    color: var(--dark-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    background-color: black;
+    color: #00bcd4;
+}
+
+/* ================================================= */
+/* === 2. Hero Section (Glassmorphism Card) === */
+/* ================================================= */
+.hero-section {
+    display: flex;
+    align-items: center;
+    padding: 4rem 5%;
+    min-height: 80vh;
+    gap: 5rem;
+    margin: 2rem 5%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid var(--card-border);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    min-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--light-color);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    color: #bdbdbd;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cta-button:hover {
+    background-color: rgb(81, 168, 202);
+    transform: translateY(-2px);
+}
+
+.hero-img-tag {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: inherit;
+}
+
+/* ================================================= */
+/* === 3. Features Section (CSS Grid & Glassmorphism) === */
+/* ================================================= */
+.features-section {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.features-section h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    color: var(--primary-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    padding: 2.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: var(--card-background);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--card-border);
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--light-color);
+}
+
+/* ================================================= */
+/* === 4. Footer Styling (Dark) === */
+/* ================================================= */
+.main-footer {
+    background-color: #0d0d0d;
+    color: white;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    font-size: 1.6rem;
+    margin-left: 1.2rem;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.nav-toggle-checkbox,
+.nav-toggle {
+    display: none;
+}
+
+
+/* ================================================= */
+/* === 5. MEDIA QUERIES FOR FULL RESPONSIVENESS === */
+/* ================================================= */
+
+/* X-Small: <576px */
+/* ========================== */
+/* X-Small Screens (<576px) */
+/* ========================== */
+@media (max-width: 575.98px) {
+
+    /* --- HEADER --- */
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 3%;
+        width: 100%;
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+        position: fixed;
+        z-index: 9999;
+    }
+
+    /* Hamburger button using checkbox hack */
+    .main-header .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        margin-top: 0.5rem;
+    }
+
+    .main-header .nav-toggle span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--dark-color);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    /* Hide the nav links initially */
+    .main-header .main-nav {
+        width: 100%;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        background-color:  rgb(81, 168, 202);
+        margin-top: 0.5rem;
+        border-radius: 8px;
+    }
+
+    .main-header .main-nav a {
+        width: 100%;
+        padding: 0.7rem 0;
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Toggle nav when checkbox is checked */
+    #nav-toggle-checkbox:checked + .nav-toggle + .main-nav {
+        max-height: 500px;
+    }
+
+    /* Hamburger animation */
+    #nav-toggle-checkbox:checked + .nav-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #nav-toggle-checkbox:checked + .nav-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+    #nav-toggle-checkbox:checked + .nav-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* --- HERO SECTION --- */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 3%;
+        margin-top: 5rem; /* space below sticky header */
+    }
+
+    .hero-image {
+        order: -1;
+        width: 100%;
+        min-height: 200px;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        height: 50%;
+        width: 80%;
+        /* padding: 1rem 0; */
+    }
+
+    /* --- FEATURES SECTION --- */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* --- FOOTER --- */
+    .main-footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 3%;
+    }
+
+    .main-footer p {
+        margin-bottom: 0.5rem;
+    }
+
+    .social-links {
+        margin-top: 0.5rem;
+    }
+
+    .social-links a {
+        margin: 0 0.5rem;
+    }
+}
+
+/* ========================== */
+/* Small to Medium Screens (≥576px and ≤768px) */
+/* ========================== */
+/* Hide toggle by default */
+.nav-toggle,
+.nav-toggle-checkbox {
+  display: none;
+}
+
+/* =============== SMALL & MEDIUM SCREENS (≤768px) =============== */
+@media (max-width: 768px) {
+  /* Show hamburger */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-toggle-checkbox {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    width: 35px;
+    height: 25px;
+    right: 1rem;
+    top: 1.2rem;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  /* Header layout */
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    position: relative;
+    background: #fff;
+    z-index: 10;
+  }
+
+  /* Hide nav initially */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+  }
+
+  .main-nav a {
+    color: #fff;
+    display: block;
+    padding: 0.9rem 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Show nav when checked */
+  .nav-toggle-checkbox:checked + .nav-toggle + .main-nav {
+    max-height: 300px;
+  }
+
+  /* Animate hamburger to X */
+  .nav-toggle-checkbox:checked + .nav-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .nav-toggle-checkbox:checked + .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle-checkbox:checked + .nav-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+
+/* Large: ≥992px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nav-toggle-checkbox{
+        display: none;
+    }
+}
+
+/* Extra Large: ≥1200px */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+}
+
+/* Extra Extra Large: ≥1400px */
+@media (min-width: 1400px) {
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+}
