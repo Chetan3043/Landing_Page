@@ -15,10 +15,10 @@ The page is structured into key sections — Header, Hero, Features, and Footer 
 
 🧩 Sections:
 
-Header – Sticky top navigation with logo and responsive nav links.
-Hero Section – Prominent tagline, call-to-action button, and responsive hero image.
-Features Section – Three visually engaging cards highlighting the product’s benefits.
-Footer – Dark footer with copyright text and social media icons.
+1) Header – Sticky top navigation with logo and responsive nav links.
+2) Hero Section – Prominent tagline, call-to-action button, and responsive hero image.
+3) Features Section – Three visually engaging cards highlighting the product’s benefits.
+4) Footer – Dark footer with copyright text and social media icons.
 
 🧰 Technologies Used:
 
