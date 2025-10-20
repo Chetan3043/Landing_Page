@@ -22,6 +22,6 @@ Footer – Dark footer with copyright text and social media icons.
 
 🧰 Technologies Used:
 
-HTML5
-CSS3 (Flexbox, Grid, Media Queries, Glassmorphism)
-Font Awesome (for icons)
+1) HTML5
+2) CSS3 (Flexbox, Grid, Media Queries, Glassmorphism)
+3) Font Awesome (for icons)
